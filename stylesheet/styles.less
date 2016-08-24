@@ -1,0 +1,192 @@
+
+/*-----------------------------------------------------
+    Cores
+  -----------------------------------------------------*/
+@azul:#24ace3;
+@amarelo:#fff100;
+@branco:#fff;
+@rosa:#eb008b;
+@preto:#000;
+@cinza:#282828;
+
+
+/*-----------------------------------------------------
+	Gerais
+  -----------------------------------------------------*/
+.font-texto {
+    font-family: 'Prompt', sans-serif;
+    line-height: 1.4em;
+}  
+.font {
+    font-family: 'Montserrat', sans-serif;
+}
+@tamanhoFontMenu:1.6em;
+@tamanhoFontTexto1:2.0em;
+@tamanhoFontTexto2:2.5em;
+@tamanhoFontTexto3:3.4em;
+@tamanhoFontTexto4:2.247em;
+@tamanhoFontTexto5:1.8em;
+@tamanhoFontTexto6:1.2em;
+@tamanhoFontTexto7:1.5em;
+@tamanhoFontTitulo0:2em;
+@tamanhoFontTitulo1:2.5em;
+@tamanhoFontTitulo2:4.3em;
+
+.retira-margens {
+    margin: 0;
+    padding: 0;
+}
+
+.tempoDeTransicao (@tempo: 1s) {
+    -webkit-transition: @tempo ease-in-out;
+    -moz-transition: @tempo ease-in-out;
+    -o-transition: @tempo ease-in-out;
+    transition: @tempo ease-in-out;
+}  
+
+.ponto-zero {
+    position: relative;
+}
+
+/******************************************************************/
+/******************************************************************/
+/****                                                          ****/
+/****A   C R I A N Ç A   -   I T E N S   P A R T E   F I N A L ****/
+/****                                                          ****/
+/******************************************************************/
+/******************************************************************/
+.itens-a-crianca {
+    position: relative;
+    overflow: hidden;
+}
+
+
+    
+@media only screen and (min-width: 320px) {
+    .itens-a-crianca {
+        background-color: @branco;
+    }
+    .itens-a-crianca .itens-sem-click {
+        display: block;
+        width: 100%
+    }    
+    .itens-a-crianca .itens {
+        .tempoDeTransicao(0.3s);
+        width: 100%;
+        cursor: default;
+        display: none;
+    }
+    .itens-a-crianca .itens:hover {
+        .tempoDeTransicao(0.3s);
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+    }    
+    .itens-a-crianca .camada-cinza {
+        display: none;
+        position: absolute;
+        z-index: 60;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/bgProdutos.png);
+        background-repeat: repeat;
+    }
+    .itens-a-crianca .ponto-zero .img-clicada {
+        display: none;
+        position: absolute;
+    }
+    .itens-a-crianca .ponto-zero .texto-item {
+        display: block;
+        position: relative;
+        border: none;
+    }
+    .itens-a-crianca .ponto-zero .texto-item .bot-fechar {
+        display: none;
+        cursor: pointer;
+    }
+    .itens-a-crianca .ponto-zero .texto-item p {
+        .font-texto;
+        font-size: @tamanhoFontTexto7;
+        font-weight: 300;
+        color: @cinza;
+        margin-bottom: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 10px;
+    }
+
+
+}
+@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 768px) {
+
+
+
+
+    .itens-a-crianca {
+        background-color: @preto;
+    }
+    .itens-a-crianca .itens-sem-click {
+        display: none;
+        width: 100%
+    }  
+    .itens-a-crianca .itens {
+        .tempoDeTransicao(0.3s);
+        width: 100%;
+        z-index: 50;
+        position: relative;
+        cursor: pointer;
+        display: block;
+    }
+    .itens-a-crianca .itens:hover {
+        .tempoDeTransicao(0.3s);
+        transform: scale(1.04, 1.04);
+        -ms-transform: scale(1.04, 1.04);
+        -webkit-transform: scale(1.04, 1.04);
+    }
+    .itens-a-crianca .ponto-zero .img-clicada {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        /*width: 30.2543720190779%        */
+    }
+    .itens-a-crianca .ponto-zero .img-clicada img {
+        width: 100%
+    }
+    
+    .itens-a-crianca .ponto-zero .texto-item {
+        /*display: none;*/
+        position: absolute;
+        background-color: @branco;
+        width: 200%;
+        height: 100%;
+        z-index: 40;
+        top:0;
+        left:0;
+        padding: 100px 80px 100px 80px;
+        overflow: auto;
+        border-bottom: solid 2px @preto;
+    }
+    .itens-a-crianca .ponto-zero .texto-item .ponto-zero .bot-fechar {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: -50px;
+    }
+    .itens-a-crianca .ponto-zero .texto-item p {
+        .font-texto;
+        font-size: @tamanhoFontTexto7;
+        font-weight: 300;
+        color: @cinza;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0; 
+        text-align: center;       
+    }
+}
+@media only screen and (min-width: 830px) {}
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 1382px) {}
